@@ -1,0 +1,169 @@
+.limitedbox {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 68%;
+}
+.limitedbox .uploadbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px dashed #999;
+  cursor: pointer;
+}
+.limitedbox .uploadbox .addicon {
+  width: auto;
+  padding-left: 35px;
+  font-size: 20px;
+}
+.limitedbox .uploadbox .addicon i {
+  position: absolute;
+  left: 0;
+  top: -7px;
+  font-size: 30px;
+}
+#photofile {
+  display: none;
+}
+.beyond {
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+}
+.beyond .emojibox,
+.beyond .ctrlbox,
+.beyond .removebox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.beyond .emojibox table {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.beyond .emojibox table tr {
+  width: 100%;
+  height: 25%;
+}
+.beyond .emojibox table tr td {
+  position: relative;
+  width: 25%;
+  border: 1px solid #ddd;
+}
+.beyond .emojibox table tr td img {
+  width: 80%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.beyond .ctrlbox {
+  padding-top: 120px;
+  display: none;
+  background-color: #eee;
+}
+.beyond .ctrlbox table {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120px;
+}
+.beyond .ctrlbox table .title {
+  width: 20%;
+  text-align: center;
+}
+.beyond .ctrlbox table .bar {
+  width: 80%;
+}
+.beyond .ctrlbox table .bar input[type="range"] {
+  width: 75%;
+  position: relative;
+  top: 3px;
+}
+.beyond .ctrlbox table .bar input[type='text'] {
+  width: 18%;
+  background-color: transparent;
+  color: #333 !important;
+  border: 0;
+}
+.beyond .ctrlbox .btn {
+  width: 90%;
+  margin: 10px auto;
+  height: 40px;
+  background-color: #19bf62;
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+.beyond .removebox {
+  display: none;
+  background-color: #d8574a;
+}
+.beyond .removebox i {
+  font-size: 60px;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.beyond.ctrlstate .ctrlbox {
+  display: block;
+}
+.beyond.removestate .removebox {
+  display: block;
+}
+.emoji {
+  position: fixed;
+}
+.emoji.draging {
+  opacity: 0.5;
+}
+.verticalCenter {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.horizontalCenter {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.veryCenter {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
