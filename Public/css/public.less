@@ -44,33 +44,17 @@
 		overflow: hidden;
 		.scrollbox{
 			// position: relative;
+			display: none;
 			width: 100%;
 			height: 100%;
 			overflow-x: scroll;
 			padding:2px 0px 45px;
-			// .left,.right{
-			// 	position: absolute;
-			// 	width: 30px;
-			// 	height: 100%;
-			// 	padding-bottom: 45px;
-			// 	top:0;
-			// 	i{
-			// 		.veryCenter;
-			// 		margin-top: -22px;
-			// 	}
-			// }
-			// .left{
-			// 	left: 0;
-			// }
-			// .right{
-			// 	right: 0;
-			// }
 			.longbox{
 				position: relative;
-				width: 400%;
+				// width: 100%;
 				height: 100%;
 				table{
-					width: 25%;
+					// width: 25%;
 					height: 100%;
 					float: left;
 					table-layout: fixed;
@@ -83,11 +67,71 @@
 							width: 12.5%;
 							// border: 1px solid #ddd;
 							img{
-								width: 80%;
+								width: 70%;
 								.veryCenter;
 							}
 						}
 					}
+				}
+			}
+		}
+		&[data-showid='emotion']{
+			.scrollbox#emotion{
+				display: block;
+			}
+			.section{
+				&>div[data-tab='emotion']{
+					background-color: #f4f4f4;
+				}
+			}
+		}
+		&[data-showid='human']{
+			.scrollbox#human{
+				display: block;
+			}
+			.section{
+				&>div[data-tab='human']{
+					background-color: #f4f4f4;
+				}
+			}
+		}
+		&[data-showid='animal']{
+			.scrollbox#animal{
+				display: block;
+			}
+			.section{
+				&>div[data-tab='animal']{
+					background-color: #f4f4f4;
+				}
+			}
+		}
+		&[data-showid='garment']{
+			.scrollbox#garment{
+				display: block;
+			}
+			.section{
+				&>div[data-tab='garment']{
+					background-color: #f4f4f4;
+				}
+			}
+		}
+		&[data-showid='food']{
+			.scrollbox#food{
+				display: block;
+			}
+			.section{
+				&>div[data-tab='food']{
+					background-color: #f4f4f4;
+				}
+			}
+		}
+		&[data-showid='other']{
+			.scrollbox#other{
+				display: block;
+			}
+			.section{
+				&>div[data-tab='other']{
+					background-color: #f4f4f4;
 				}
 			}
 		}
@@ -99,7 +143,7 @@
 			height: 15px;
 			line-height: 7px;
 			text-align: center;
-			z-index: 1;
+			// z-index: 1;
 			background-color: #f4f4f4;
 			a{
 				display: inline-block;
@@ -124,9 +168,6 @@
 				float: left;
 				width: 16.66%;
 				text-align: center;
-				&.now{
-					background-color: #f4f4f4;
-				}
 			}
 		}
 	}
@@ -180,11 +221,17 @@
 	}
 }
 .beyond.ctrlstate{
+	// .emojibox{
+	// 	display: none;
+	// }
 	.ctrlbox{
 		display: block;
 	}
 }
 .beyond.removestate{
+	// .emojibox{
+	// 	display: none;
+	// }
 	.removebox{
 		display: block;
 	}
