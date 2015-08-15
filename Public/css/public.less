@@ -96,25 +96,41 @@
 			padding:2px 0px 45px;
 			.longbox{
 				position: relative;
-				// width: 100%;
 				height: 100%;
-				table{
-					// width: 25%;
+				// table{
+				// 	height: 100%;
+				// 	float: left;
+				// 	table-layout: fixed;
+				// 	border-collapse: collapse;
+				// 	tr{
+				// 		width: 100%;
+				// 		height: 33.3%;
+				// 		td{
+				// 			position: relative;
+				// 			width: 12.5%;
+				// 			// border: 1px solid #ddd;
+				// 			img{
+				// 				width: 70%;
+				// 				.veryCenter;
+				// 			}
+				// 		}
+				// 	}
+				// }
+				.emojitable{
 					height: 100%;
 					float: left;
-					table-layout: fixed;
-					border-collapse: collapse;
-					tr{
-						width: 100%;
+					&>div{
+						position: relative;
+						width: 14.28%;
 						height: 33.3%;
-						td{
-							position: relative;
-							width: 12.5%;
-							// border: 1px solid #ddd;
-							img{
-								width: 70%;
-								.veryCenter;
-							}
+						float: left;
+						// &:after{
+						// 	content:'';
+						// 	clear: right;
+						// }
+						img{
+							width: 70%;
+							.veryCenter;
 						}
 					}
 				}

@@ -1,8 +1,9 @@
 var sW = $(window).width(), sH = $(window).height(), _r = 0.68;
 $("#beyond").height(sH-sW*_r);
 $.each($("#emojibox .scrollbox .longbox"),function(){
-	var l = $(this).children('table').length;
-	$(this).css("width",l*100+"%").children('table').css("width",100/l+"%");
+	var l = $(this).children('.emojitable').length;
+	console.log(l);
+	$(this).css("width",l*100+"%").children('.emojitable').css("width",100/l+"%");
 })
 $("#uploadbox").bind('click',function(){
 	$('#photofile').trigger('click');
@@ -27,7 +28,7 @@ $("#photofile").on("change",function(){
 var tX, tY, oX, oY, imghtml;
 var isTouchStart = false;
 var hasEmojiOut = false;
-$(".emojitable td img").on('touchstart',function(e){
+$(".emojitable div img").on('touchstart',function(e){
 	e.stopPropagation();
 	e.preventDefault();
 	tX = e.originalEvent.changedTouches[0].pageX;

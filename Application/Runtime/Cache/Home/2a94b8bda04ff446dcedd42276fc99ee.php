@@ -21,7 +21,7 @@
 	</div>
 	<div class="limitedbox">
 		<div class="canvasbox">
-			<canvas id="canvas"></canvas>
+			<canvas id="canvas" width="320" height="217.6"></canvas>
 		</div>
 		<div class="uploadbox" id="uploadbox">
 			<div class="addicon veryCenter">
@@ -902,10 +902,12 @@
 		</div>
 	</div>
 <script src="/emoji/Public/js/public.js"></script>
-<script src="/emoji/Public/js/hidpi-canvas.js"></script>
+<!-- <script src="/emoji/Public/js/hidpi-canvas.js"></script> -->
 <script>
 var canvas = document.getElementById("canvas"),
 	context = canvas.getContext('2d');
+	ratio = getPixelRatio(context);
+
 	$("#savebtn").bind("click",function(){
 		context.drawImage($(".limitedbox img")[0],0,0);
 		$(".limitedbox img").hide();
@@ -913,6 +915,15 @@ var canvas = document.getElementById("canvas"),
 			
 		})
 	})
+function getPixelRatio(context){
+    var backingStore = context.backingStorePixelRatio ||
+          context.webkitBackingStorePixelRatio ||
+          context.mozBackingStorePixelRatio ||
+          context.msBackingStorePixelRatio ||
+          context.oBackingStorePixelRatio ||
+          context.backingStorePixelRatio || 1;
+    return (window.devicePixelRatio || 1) / backingStore;
+};
 </script>
 </body>
 </html>

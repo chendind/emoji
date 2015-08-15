@@ -106,21 +106,17 @@
   position: relative;
   height: 100%;
 }
-.beyond .emojibox .scrollbox .longbox table {
+.beyond .emojibox .scrollbox .longbox .emojitable {
   height: 100%;
   float: left;
-  table-layout: fixed;
-  border-collapse: collapse;
 }
-.beyond .emojibox .scrollbox .longbox table tr {
-  width: 100%;
-  height: 33.3%;
-}
-.beyond .emojibox .scrollbox .longbox table tr td {
+.beyond .emojibox .scrollbox .longbox .emojitable > div {
   position: relative;
-  width: 12.5%;
+  width: 14.28%;
+  height: 33.3%;
+  float: left;
 }
-.beyond .emojibox .scrollbox .longbox table tr td img {
+.beyond .emojibox .scrollbox .longbox .emojitable > div img {
   width: 70%;
   display: block;
   position: absolute;

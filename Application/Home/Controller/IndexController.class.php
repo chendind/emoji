@@ -21,7 +21,6 @@ $j+=1;
 
 }
 }
-dump($emotion);
 $this->assign("emotion",$emotion);
 $this->assign("emotioncount",count($emotion));
         
