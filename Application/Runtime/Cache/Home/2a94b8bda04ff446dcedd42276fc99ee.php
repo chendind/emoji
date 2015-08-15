@@ -1,20 +1,20 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en" ng-app>
 <head>
 	<meta charset="UTF-8">
 	<title>Emoji表情大暴走</title>
-	<link rel="icon" href="__PUBLIC__/img/icon64.ico" />
+	<link rel="icon" href="/emoji/Public/img/icon64.ico" />
 	<meta name="description" content="地球人已经无法阻止emoji表情啦">
 	<meta name="author" content="chendind@leovito.com">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/flaticon/flaticon.css"> 
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/public.css">
-    <script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/emoji/Public/css/flaticon/flaticon.css"> 
+    <link rel="stylesheet" type="text/css" href="/emoji/Public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/emoji/Public/css/public.css">
+    <script src="/emoji/Public/js/jquery-1.7.2.min.js"></script>
 </head>
 <body>
 	<div style="display:none">
-		<img src="__PUBLIC__/img/icon300.png" alt="" />
+		<img src="/emoji/Public/img/icon300.png" alt="" />
 	</div>
 	<div class="limitedbox">
 		<div class="uploadbox" id="uploadbox">
@@ -31,284 +31,284 @@
 					<table data-index="1" class="emojitable" id="emojitable">
 						<tr>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 						</tr>
 					</table>
 					<table data-index="2" class="emojitable" id="emojitable">
 						<tr>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 						</tr>
 					</table>
 					<table data-index="3" class="emojitable" id="emojitable">
 						<tr>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 						</tr>
 					</table>
 					<table data-index="4" class="emojitable" id="emojitable">
 						<tr>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 							<td>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/198.png">
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
+							</td>
+							<td>
+								<img src="/emoji/Public/emoji/emoji64/emotion/198.png">
 							</td>
 						</tr>
 					</table>
@@ -563,7 +563,7 @@ function getUrl(file){
 // });
 // wx.onMenuShareTimeline({
 //     title: '陈总太牛逼了', // 分享标题
-//     link: '__PUBLIC__/index.html', // 分享链接
+//     link: '/emoji/Public/index.html', // 分享链接
 //     imgUrl: 'img/icon400.png', // 分享图标
 //     success: function () { 
 //         alert("success");
