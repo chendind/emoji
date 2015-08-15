@@ -1,15 +1,64 @@
+* {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+}
+.greybg {
+  background-color: #ddd;
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.greenbg {
+  background-color: #569e3d;
+  background-image: -webkit-linear-gradient(#79d858, #569e3d);
+  background-image: linear-gradient(#79d858, #569e3d);
+  border-color: 1px solid #4a993e;
+  border-radius: 3px;
+}
+.redbg {
+  background-color: #f41f16;
+  background-image: -webkit-linear-gradient(#f41f16, #b5150d);
+  background-image: linear-gradient(#f41f16, #b5150d);
+  border-color: 1px solid #ca140b;
+  border-radius: 3px;
+}
+.savebtn {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  width: 78px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #ddd;
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  z-index: 999;
+}
 .limitedbox {
   position: relative;
   width: 100%;
   height: 0;
   padding-bottom: 68%;
 }
+.limitedbox .canvasbox,
 .limitedbox .uploadbox {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+.limitedbox .uploadbox {
   border: 3px dashed #999;
   cursor: pointer;
 }
@@ -31,6 +80,7 @@
   width: 100%;
   min-height: 100px;
   position: relative;
+  background-color: #f4f4f4;
 }
 .beyond .emojibox,
 .beyond .ctrlbox,
@@ -41,23 +91,37 @@
   top: 0;
   left: 0;
 }
-.beyond .emojibox table {
+.beyond .emojibox {
+  width: 100%;
+  overflow: hidden;
+}
+.beyond .emojibox .scrollbox {
+  display: none;
   width: 100%;
   height: 100%;
+  overflow-x: scroll;
+  padding: 2px 0px 45px;
+}
+.beyond .emojibox .scrollbox .longbox {
+  position: relative;
+  height: 100%;
+}
+.beyond .emojibox .scrollbox .longbox table {
+  height: 100%;
+  float: left;
   table-layout: fixed;
   border-collapse: collapse;
 }
-.beyond .emojibox table tr {
+.beyond .emojibox .scrollbox .longbox table tr {
   width: 100%;
-  height: 25%;
+  height: 33.3%;
 }
-.beyond .emojibox table tr td {
+.beyond .emojibox .scrollbox .longbox table tr td {
   position: relative;
-  width: 25%;
-  border: 1px solid #ddd;
+  width: 12.5%;
 }
-.beyond .emojibox table tr td img {
-  width: 80%;
+.beyond .emojibox .scrollbox .longbox table tr td img {
+  width: 70%;
   display: block;
   position: absolute;
   top: 50%;
@@ -68,16 +132,84 @@
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
+.beyond .emojibox[data-showid='emotion'] .scrollbox#emotion {
+  display: block;
+}
+.beyond .emojibox[data-showid='emotion'] .section > div[data-tab='emotion'] {
+  background-color: #f4f4f4;
+}
+.beyond .emojibox[data-showid='human'] .scrollbox#human {
+  display: block;
+}
+.beyond .emojibox[data-showid='human'] .section > div[data-tab='human'] {
+  background-color: #f4f4f4;
+}
+.beyond .emojibox[data-showid='animal'] .scrollbox#animal {
+  display: block;
+}
+.beyond .emojibox[data-showid='animal'] .section > div[data-tab='animal'] {
+  background-color: #f4f4f4;
+}
+.beyond .emojibox[data-showid='garment'] .scrollbox#garment {
+  display: block;
+}
+.beyond .emojibox[data-showid='garment'] .section > div[data-tab='garment'] {
+  background-color: #f4f4f4;
+}
+.beyond .emojibox[data-showid='food'] .scrollbox#food {
+  display: block;
+}
+.beyond .emojibox[data-showid='food'] .section > div[data-tab='food'] {
+  background-color: #f4f4f4;
+}
+.beyond .emojibox[data-showid='other'] .scrollbox#other {
+  display: block;
+}
+.beyond .emojibox[data-showid='other'] .section > div[data-tab='other'] {
+  background-color: #f4f4f4;
+}
+.beyond .emojibox .pagenav {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  line-height: 7px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+.beyond .emojibox .pagenav a {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #ccc;
+  margin: 0 2px;
+}
+.beyond .emojibox .pagenav a.now {
+  background-color: #777;
+}
+.beyond .emojibox .section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #fff;
+}
+.beyond .emojibox .section > div {
+  float: left;
+  width: 16.66%;
+  text-align: center;
+}
 .beyond .ctrlbox {
-  padding-top: 120px;
   display: none;
   background-color: #eee;
 }
 .beyond .ctrlbox table {
-  position: absolute;
-  top: 0;
   width: 100%;
-  height: 120px;
+  height: 40%;
 }
 .beyond .ctrlbox table .title {
   width: 20%;
@@ -97,15 +229,43 @@
   color: #333 !important;
   border: 0;
 }
-.beyond .ctrlbox .btn {
+.beyond .ctrlbox .btngroup {
+  height: 60%;
+}
+.beyond .ctrlbox .btngroup .btn {
+  position: relative;
   width: 90%;
-  margin: 10px auto;
-  height: 40px;
-  background-color: #19bf62;
-  line-height: 40px;
-  font-size: 20px;
+  margin: 0px auto;
+  height: 35%;
+  line-height: 30px;
+  font-size: 18px;
   text-align: center;
   color: #fff;
+}
+.beyond .ctrlbox .btngroup .btn:nth-child(1) {
+  background-color: #569e3d;
+  background-image: -webkit-linear-gradient(#79d858, #569e3d);
+  background-image: linear-gradient(#79d858, #569e3d);
+  border-color: 1px solid #4a993e;
+  border-radius: 3px;
+}
+.beyond .ctrlbox .btngroup .btn:nth-child(2) {
+  background-color: #f41f16;
+  background-image: -webkit-linear-gradient(#f41f16, #b5150d);
+  background-image: linear-gradient(#f41f16, #b5150d);
+  border-color: 1px solid #ca140b;
+  border-radius: 3px;
+}
+.beyond .ctrlbox .btngroup .btn span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 .beyond .removebox {
   display: none;
@@ -131,7 +291,8 @@
   display: block;
 }
 .emoji {
-  position: fixed;
+  position: absolute;
+  width: 80px;
 }
 .emoji.draging {
   opacity: 0.5;
