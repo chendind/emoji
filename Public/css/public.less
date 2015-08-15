@@ -4,17 +4,56 @@
 	-ms-user-select: none;      /* IE 10+ */
 	user-select: none;
 }
+.greybg{
+	background-color: #ddd;
+	background-image: -webkit-linear-gradient(#eee, #ddd);
+	background-image: linear-gradient(#eee, #ddd);
+	border:1px solid #ccc;
+	border-radius: 3px;
+}
+.greenbg{
+	background-color: #569e3d;
+	background-image: -webkit-linear-gradient(#79d858, #569e3d);
+	background-image: linear-gradient(#79d858, #569e3d);
+	border-color: 1px solid #4a993e;
+	border-radius: 3px;
+}
+.redbg{
+	background-color: #f41f16;
+	background-image: -webkit-linear-gradient(#f41f16, #b5150d);
+	background-image: linear-gradient(#f41f16, #b5150d);
+	border-color: 1px solid #ca140b;
+	border-radius: 3px;
+}
+.savebtn{
+	position: fixed;
+	top: 5px;
+	left: 5px;
+	width: 78px;
+	height: 24px;
+	line-height: 24px;
+	.greybg;
+	font-size: 12px;
+	text-align: center;
+	z-index:999;
+}
 .limitedbox{
 	position: relative;
 	width: 100%;
 	height:0;
 	padding-bottom: 68%;
-	.uploadbox{
+	.canvasbox,.uploadbox{
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
+	}
+	.canvasbox{
+		// width: 100%;
+		// height: 100%;
+	}
+	.uploadbox{
 		border: 3px dashed #999;
 		cursor: pointer;
 		.addicon{
@@ -210,10 +249,15 @@
 				margin: 0px auto;
 				height: 35%;
 				line-height: 30px;
-				background-color: #19bf62;
 				font-size: 18px;
 				text-align: center;
 				color: #fff;
+				&:nth-child(1){
+					.greenbg;
+				}
+				&:nth-child(2){
+					.redbg;
+				}
 				span{
 					.veryCenter;
 				}
