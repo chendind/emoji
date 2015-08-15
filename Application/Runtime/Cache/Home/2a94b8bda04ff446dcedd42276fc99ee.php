@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Emoji表情大暴走</title>
@@ -882,8 +882,14 @@
 					</td>
 				</tr>
 			</table>
-			<div class="btn" id="confirmbtn">确定</div>
-			<div class="btn" id="resetbtn" style="background-color:#d82920;margin-top:15px;">复位</div>
+			<div class="btngroup">
+				<div class="btn" id="confirmbtn">
+					<span>确定</span>
+				</div>
+				<div class="btn" id="resetbtn" style="background-color:#d82920;margin-top:15px;">
+					<span>复位</span>
+				</div>
+			</div>
 		</div>
 		<div class="removebox">
 			<i class="flaticon-rubbish7"></i>
@@ -929,7 +935,8 @@ $(".emojitable td img").on('touchstart',function(e){
 	oY = $(this).offset().top;
 	var src = $(this).attr("src");
 	imghtml = "<img src='"+src+"' class='emoji draging' style='left:"+oX+"px;top:"+oY+"px;transform:rotate({{rotate}}deg)' />";
-	$(imghtml).appendTo('body').dragInit();
+	// $(imghtml).appendTo('body').dragInit();
+	$(imghtml).appendTo('.limitedbox').dragInit();
 	isTouchStart = true;
 })
 

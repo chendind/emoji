@@ -1,3 +1,12 @@
+* {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+}
 .limitedbox {
   position: relative;
   width: 100%;
@@ -155,15 +164,12 @@
   text-align: center;
 }
 .beyond .ctrlbox {
-  padding-top: 120px;
   display: none;
   background-color: #eee;
 }
 .beyond .ctrlbox table {
-  position: absolute;
-  top: 0;
   width: 100%;
-  height: 120px;
+  height: 40%;
 }
 .beyond .ctrlbox table .title {
   width: 20%;
@@ -183,15 +189,30 @@
   color: #333 !important;
   border: 0;
 }
-.beyond .ctrlbox .btn {
+.beyond .ctrlbox .btngroup {
+  height: 60%;
+}
+.beyond .ctrlbox .btngroup .btn {
+  position: relative;
   width: 90%;
-  margin: 10px auto;
-  height: 40px;
+  margin: 0px auto;
+  height: 35%;
+  line-height: 30px;
   background-color: #19bf62;
-  line-height: 40px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   color: #fff;
+}
+.beyond .ctrlbox .btngroup .btn span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 .beyond .removebox {
   display: none;
@@ -217,7 +238,7 @@
   display: block;
 }
 .emoji {
-  position: fixed;
+  position: absolute;
 }
 .emoji.draging {
   opacity: 0.5;
