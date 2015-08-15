@@ -239,6 +239,7 @@
 }
 .emoji {
   position: absolute;
+  width: 80px;
 }
 .emoji.draging {
   opacity: 0.5;

@@ -933,7 +933,7 @@ $(".emojitable td img").on('touchstart',function(e){
     tY = e.originalEvent.changedTouches[0].pageY;
 	oX = $(this).offset().left;
 	oY = $(this).offset().top;
-	var src = $(this).attr("src");
+	var src = $(this).attr("src").replace("emoji64","emoji160");
 	imghtml = "<img src='"+src+"' class='emoji draging' style='left:"+oX+"px;top:"+oY+"px;transform:rotate({{rotate}}deg)' />";
 	// $(imghtml).appendTo('body').dragInit();
 	$(imghtml).appendTo('.limitedbox').dragInit();
@@ -1059,7 +1059,7 @@ $.fn.bindCtrl = function(){
 	$this.addClass('adjusting');
 	$('.range').unbind(".control");
 	$("#sizerange").bind('touchmove.control',function(){
-		var v = $(this).val();
+		var v = $(this).val()/2;
 		$this.css({"width":w*v});
 	});
 	$("#rotaterange").val($this.attr("data-rotate")).bind('touchmove.control',function(){
