@@ -36,556 +36,116 @@
 	<div class="beyond" id="beyond">
 		<div class="emojibox" id="emojibox" data-showid="emotion">
 			<div class="scrollbox" id="emotion">
-				<div class="longbox" data-page="1">
-				<for start="0" end="$emotioncount">
+				<div class="longbox" data-page="0">
+					<for start="0" end="$emotioncount">
+						<div data-index="{$i}" class="emojitable">
+							<foreach name="emotion[$i]" item="vo[$i]" >
+								<div>
+									<img src="__PUBLIC__/emoji/emoji64/emotion/{$vo[$i]}">
+								</div>
+							</foreach>
+						</div>
+					</for>
+				</div>
+				<div class="pagenav">
+					<for start="0" end="$emotioncount">
+						<a <if condition="$i eq 0">class="now"</if>></a>
+					</for>
+				</div>
+			</div>
+			<div class="scrollbox" id="human">
+				<div class="longbox" data-page="0">
+					<for start="0" end="$humancount">
+						<div data-index="{$i}" class="emojitable">
+							<foreach name="human[$i]" item="vohuman[$i]" >
+								<div>
+									<img src="__PUBLIC__/emoji/emoji64/human/{$vohuman[$i]}">
+								</div>
+							</foreach>
+						</div>
+					</for>
+				</div>
+				<div class="pagenav">
+					<for start="0" end="$humancount">
+						<a <if condition="$i eq 0">class="now"</if>></a>
+					</for>
+				</div>
+			</div>
+			
+			<div class="scrollbox" id="animal">
+				<div class="longbox" data-page="0">
+					<for start="0" end="$animalcount">
+						<div data-index="{$i}" class="emojitable">
+							<foreach name="animal[$i]" item="voanimal[$i]" >
+								<div>
+									<img src="__PUBLIC__/emoji/emoji64/animal/{$voanimal[$i]}">
+								</div>
+							</foreach>
+						</div>
+					</for>
+				</div>
+				<div class="pagenav">
+					<for start="0" end="$animalcount">
+						<a <if condition="$i eq 0">class="now"</if>></a>
+					</for>
+				</div>
+			</div>
+			
+			
+			<div class="scrollbox" id="garment">
+				<div class="longbox" data-page="0">
+					<for start="0" end="$garmentcount">
+						<div data-index="{$i}" class="emojitable">
+							<foreach name="garment[$i]" item="vogarment[$i]" >
+								<div>
+									<img src="__PUBLIC__/emoji/emoji64/garment/{$vogarment[$i]}">
+								</div>
+							</foreach>
+						</div>
+					</for>
+				</div>
+				<div class="pagenav">
+					<for start="0" end="$garmentcount">
+						<a <if condition="$i eq 0">class="now"</if>></a>
+					</for>
+				</div>
+			</div>
+			
+			
+			<div class="scrollbox" id="food">
+				<div class="longbox" data-page="0">
+					<for start="0" end="$foodcount">
+						<div data-index="{$i}" class="emojitable">
+							<foreach name="food[$i]" item="vofood[$i]" >
+								<div>
+									<img src="__PUBLIC__/emoji/emoji64/food/{$vofood[$i]}">
+								</div>
+							</foreach>
+						</div>
+					</for>
+				</div>
+				<div class="pagenav">
+					<for start="0" end="$foodcount">
+						<a <if condition="$i eq 0">class="now"</if>></a>
+					</for>
+				</div>
+			</div>
+			<div class="scrollbox" id="other">
+				<div class="longbox" data-page="0">
+				<for start="0" end="$othercount">
 					<div data-index="{$i}" class="emojitable">
-						<foreach name="emotion[$i]" item="vo[$i]" >
+						<foreach name="other[$i]" item="voother[$i]" >
 							<div>
-								<img src="__PUBLIC__/emoji/emoji64/emotion/{$vo[$i]}">
+								<img src="__PUBLIC__/emoji/emoji64/other/{$voother[$i]}">
 							</div>
 						</foreach>
 					</div>
 				</for>
 				</div>
 				<div class="pagenav">
-					<a class="now"></a>
-					<a></a>
-					<a></a>
-					<a></a>
-				</div>
-			</div>
-			<div class="scrollbox" id="human">
-				<div class="longbox" data-page="1">
-					<table data-index="1" class="emojitable" id="emojitable">
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-						</tr>
-					</table>
-					<table data-index="2" class="emojitable" id="emojitable">
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-						</tr>
-					</table>
-					<table data-index="3" class="emojitable" id="emojitable">
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/human/286.png">
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="pagenav">
-					<a class="now"></a>
-					<a></a>
-					<a></a>
-				</div>
-			</div>
-			<div class="scrollbox" id="animal">
-				<div class="longbox" data-page="1">
-					<table data-index="1" class="emojitable" id="emojitable">
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/animal/360.png">
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="pagenav">
-					<a class="now"></a>
-				</div>
-			</div>
-			<div class="scrollbox" id="garment">
-				<div class="longbox" data-page="1">
-					<table data-index="1" class="emojitable" id="emojitable">
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/garment/281.png">
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="pagenav">
-					<a class="now"></a>
-				</div>
-			</div>
-			<div class="scrollbox" id="food">
-				<div class="longbox" data-page="1">
-					<table data-index="1" class="emojitable" id="emojitable">
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/food/229.png">
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="pagenav">
-					<a class="now"></a>
-				</div>
-			</div>
-			<div class="scrollbox" id="other">
-				<div class="longbox" data-page="1">
-					<table data-index="1" class="emojitable" id="emojitable">
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-							<td>
-								<img src="__PUBLIC__/emoji/emoji64/other/1.png">
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="pagenav">
-					<a class="now"></a>
+					<for start="0" end="$othercount">
+						<a <if condition="$i eq 0">class="now"</if>></a>
+					</for>
 				</div>
 			</div>
 			<div class="section">

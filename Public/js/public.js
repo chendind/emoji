@@ -113,17 +113,17 @@ $(document).on('touchend',".longbox",function(e){
 	if(hasEmojiOut == false){
 		var p = $(this).attr("data-page")-0,
 		maxp = $(this).children(".emojitable").length;
-		if(p>0 && p<=maxp){
+		if(p>=0 && p<maxp){
 			var l;
-			if(dx > 0 && p>1){
+			if(dx > 0 && p>0){
 				l = $(".emojitable[data-index='"+(--p)+"']",this).position().left;
 			}
-			else if(dx<0 && p<maxp){
+			else if(dx<0 && p<maxp-1){
 				l = $(".emojitable[data-index='"+(++p)+"']",this).position().left;
 			}
 			else{}
 			$(this).attr("data-page",p).closest(".scrollbox").stop(true).animate({scrollLeft:l}, 300, function(){
-				$(this).find('.pagenav a').removeClass('now').filter(":nth-child("+p+")").addClass('now');
+				$(this).find('.pagenav a').removeClass('now').filter(":nth-child("+(p+1)+")").addClass('now');
 			});
 		}
 	}
