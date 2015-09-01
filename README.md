@@ -4,7 +4,7 @@ emoji表情大暴走用于手机web拼接相册中的照片与emoji表情
 
 ## 支持retina显示屏
 
-拼接程序的核心代码使用canvas，并通过hidip-canvas.js[GitHub](https://github.com/jondavidjohn/hidpi-canvas-polyfill)使得canvas支持高清显示屏
+拼接程序的核心代码使用canvas，并通过[hidip-canvas.js](https://github.com/jondavidjohn/hidpi-canvas-polyfill)(感谢Jonathan D. Johnson)使得canvas支持高清显示屏
 
 ## 至简的设计理念
 
