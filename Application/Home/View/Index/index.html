@@ -10,196 +10,428 @@
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/flaticon/flaticon.css"> 
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/reset.css">
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/public.css">
-    <script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
 </head>
 <body>
-</table>
-</for>
-
 	<div style="display:none">
 		<img src="__PUBLIC__/img/icon300.png" alt="" />
 	</div>
-	<div class="savebtn" id="savebtn">
-		<i class="flaticon-download164"></i>合成图片
-	</div>
 	<div class="limitedbox">
-		<div class="canvasbox">
-			<canvas id="canvas"></canvas>
-		</div>
-		<div class="uploadbox" id="uploadbox">
-			<div class="addicon veryCenter">
-				<i class="flaticon-add182"></i>添加一张照片
+		<div class="ctrltop">
+			<div class="icon">
+				<i class="flaticon-add182"></i>
+			</div>
+			<div class="icon">
+				<i class="flaticon-arrow73"></i>
+			</div>
+			<div class="icon" id="resetbtn">
+				<i class="flaticon-bars62"></i>
+			</div>
+			<div class="icon" id="removebtn">
+				<i class="flaticon-rubbish7"></i>
 			</div>
 		</div>
-		<input id="photofile" type="file" />
-	</div>
-	<div class="beyond" id="beyond">
-		<div class="emojibox" id="emojibox" data-showid="emotion">
-			<div class="scrollbox" id="emotion">
-				<div class="longbox" data-page="0">
-					<for start="0" end="$emotioncount">
-						<div data-index="{$i}" class="emojitable">
-							<foreach name="emotion[$i]" item="vo[$i]" >
-								<div>
-									<img src="__PUBLIC__/emoji/emoji64/emotion/{$vo[$i]}">
-								</div>
-							</foreach>
-						</div>
-					</for>
+		<div class="innerbox">
+			<div class="canvasbox">
+				<canvas id="canvas"></canvas>
+			</div>
+			<div class="imagebox">
+			</div>
+		</div>
+		<div class="ctrlbottom">
+			<div class="ctrlbox">
+				<div>
+					<span>大小</span>
+					<input id="sizerange" class="range" type="range" value="1" max="2" min="0" step="0.05" />
 				</div>
-				<div class="pagenav">
-					<for start="0" end="$emotioncount">
-						<a <if condition="$i eq 0">class="now"</if>></a>
-					</for>
+				<div>
+					<span>旋转</span>
+					<input id="rotaterange" class="range" type="range" value="0" max="180" min="-180" step="1" />
 				</div>
 			</div>
-			<div class="scrollbox" id="human">
-				<div class="longbox" data-page="0">
-					<for start="0" end="$humancount">
-						<div data-index="{$i}" class="emojitable">
-							<foreach name="human[$i]" item="vohuman[$i]" >
-								<div>
-									<img src="__PUBLIC__/emoji/emoji64/human/{$vohuman[$i]}">
-								</div>
-							</foreach>
-						</div>
-					</for>
+			<div>
+				<div class="newimage" id="uploadbox">
+					<i class="flaticon-add182"></i>新照片
 				</div>
-				<div class="pagenav">
-					<for start="0" end="$humancount">
-						<a <if condition="$i eq 0">class="now"</if>></a>
-					</for>
+				<input id="photofile" type="file" />
+				<div class="saveimage" id="savebtn">
+					<i class="flaticon-add182"></i>保存图片
 				</div>
-			</div>
-			
-			<div class="scrollbox" id="animal">
-				<div class="longbox" data-page="0">
-					<for start="0" end="$animalcount">
-						<div data-index="{$i}" class="emojitable">
-							<foreach name="animal[$i]" item="voanimal[$i]" >
-								<div>
-									<img src="__PUBLIC__/emoji/emoji64/animal/{$voanimal[$i]}">
-								</div>
-							</foreach>
-						</div>
-					</for>
-				</div>
-				<div class="pagenav">
-					<for start="0" end="$animalcount">
-						<a <if condition="$i eq 0">class="now"</if>></a>
-					</for>
-				</div>
-			</div>
-			
-			
-			<div class="scrollbox" id="garment">
-				<div class="longbox" data-page="0">
-					<for start="0" end="$garmentcount">
-						<div data-index="{$i}" class="emojitable">
-							<foreach name="garment[$i]" item="vogarment[$i]" >
-								<div>
-									<img src="__PUBLIC__/emoji/emoji64/garment/{$vogarment[$i]}">
-								</div>
-							</foreach>
-						</div>
-					</for>
-				</div>
-				<div class="pagenav">
-					<for start="0" end="$garmentcount">
-						<a <if condition="$i eq 0">class="now"</if>></a>
-					</for>
-				</div>
-			</div>
-			
-			
-			<div class="scrollbox" id="food">
-				<div class="longbox" data-page="0">
-					<for start="0" end="$foodcount">
-						<div data-index="{$i}" class="emojitable">
-							<foreach name="food[$i]" item="vofood[$i]" >
-								<div>
-									<img src="__PUBLIC__/emoji/emoji64/food/{$vofood[$i]}">
-								</div>
-							</foreach>
-						</div>
-					</for>
-				</div>
-				<div class="pagenav">
-					<for start="0" end="$foodcount">
-						<a <if condition="$i eq 0">class="now"</if>></a>
-					</for>
-				</div>
-			</div>
-			<div class="scrollbox" id="other">
-				<div class="longbox" data-page="0">
-				<for start="0" end="$othercount">
-					<div data-index="{$i}" class="emojitable">
-						<foreach name="other[$i]" item="voother[$i]" >
-							<div>
-								<img src="__PUBLIC__/emoji/emoji64/other/{$voother[$i]}">
-							</div>
-						</foreach>
+				<div class="emojibox" id="emojibox" data-showid="emotion">
+					<div class="addemojibtn horizontalCenter">
+						<img src="__PUBLIC__/img/icon.png">
 					</div>
-				</for>
-				</div>
-				<div class="pagenav">
-					<for start="0" end="$othercount">
-						<a <if condition="$i eq 0">class="now"</if>></a>
-					</for>
+					<div class="scrollbox" id="emotion">
+						<div class="longbox" data-page="0">
+							<for start="0" end="$emotioncount">
+								<div data-index="{$i}" class="emojitable">
+									<foreach name="emotion[$i]" item="vo[$i]" >
+										<div>
+											<img src="__PUBLIC__/emoji/emoji64/emotion/{$vo[$i]}">
+										</div>
+									</foreach>
+								</div>
+							</for>
+						</div>
+						<div class="pagenav">
+							<for start="0" end="$emotioncount">
+								<a <if condition="$i eq 0">class="now"</if>></a>
+							</for>
+						</div>
+					</div>
+					<div class="scrollbox" id="human">
+						<div class="longbox" data-page="0">
+							<for start="0" end="$humancount">
+								<div data-index="{$i}" class="emojitable">
+									<foreach name="human[$i]" item="vohuman[$i]" >
+										<div>
+											<img src="__PUBLIC__/emoji/emoji64/human/{$vohuman[$i]}">
+										</div>
+									</foreach>
+								</div>
+							</for>
+						</div>
+						<div class="pagenav">
+							<for start="0" end="$humancount">
+								<a <if condition="$i eq 0">class="now"</if>></a>
+							</for>
+						</div>
+					</div>
+					<div class="scrollbox" id="animal">
+						<div class="longbox" data-page="0">
+							<for start="0" end="$animalcount">
+								<div data-index="{$i}" class="emojitable">
+									<foreach name="animal[$i]" item="voanimal[$i]" >
+										<div>
+											<img src="__PUBLIC__/emoji/emoji64/animal/{$voanimal[$i]}">
+										</div>
+									</foreach>
+								</div>
+							</for>
+						</div>
+						<div class="pagenav">
+							<for start="0" end="$animalcount">
+								<a <if condition="$i eq 0">class="now"</if>></a>
+							</for>
+						</div>
+					</div>
+					<div class="scrollbox" id="garment">
+						<div class="longbox" data-page="0">
+							<for start="0" end="$garmentcount">
+								<div data-index="{$i}" class="emojitable">
+									<foreach name="garment[$i]" item="vogarment[$i]" >
+										<div>
+											<img src="__PUBLIC__/emoji/emoji64/garment/{$vogarment[$i]}">
+										</div>
+									</foreach>
+								</div>
+							</for>
+						</div>
+						<div class="pagenav">
+							<for start="0" end="$garmentcount">
+								<a <if condition="$i eq 0">class="now"</if>></a>
+							</for>
+						</div>
+					</div>
+					<div class="scrollbox" id="food">
+						<div class="longbox" data-page="0">
+							<for start="0" end="$foodcount">
+								<div data-index="{$i}" class="emojitable">
+									<foreach name="food[$i]" item="vofood[$i]" >
+										<div>
+											<img src="__PUBLIC__/emoji/emoji64/food/{$vofood[$i]}">
+										</div>
+									</foreach>
+								</div>
+							</for>
+						</div>
+						<div class="pagenav">
+							<for start="0" end="$foodcount">
+								<a <if condition="$i eq 0">class="now"</if>></a>
+							</for>
+						</div>
+					</div>
+					<div class="scrollbox" id="other">
+						<div class="longbox" data-page="0">
+						<for start="0" end="$othercount">
+							<div data-index="{$i}" class="emojitable">
+								<foreach name="other[$i]" item="voother[$i]" >
+									<div>
+										<img src="__PUBLIC__/emoji/emoji64/other/{$voother[$i]}">
+									</div>
+								</foreach>
+							</div>
+						</for>
+						</div>
+						<div class="pagenav">
+							<for start="0" end="$othercount">
+								<a <if condition="$i eq 0">class="now"</if>></a>
+							</for>
+						</div>
+					</div>
+					<div class="section">
+						<div class="now" data-tab="emotion">表情</div>
+						<div data-tab="human">人类</div>
+						<div data-tab="animal">动物</div>
+						<div data-tab="garment">装备</div>
+						<div data-tab="food">食物</div>
+						<div data-tab="other">其他</div>
+					</div>
 				</div>
 			</div>
-			<div class="section">
-				<div class="now" data-tab="emotion">表情</div>
-				<div data-tab="human">人类</div>
-				<div data-tab="animal">动物</div>
-				<div data-tab="garment">装备</div>
-				<div data-tab="food">食物</div>
-				<div data-tab="other">其他</div>
-			</div>
-		</div>
-		<div class="ctrlbox">
-			<table>
-				<tr>
-					<td class="title">缩放</td>
-					<td class="bar"> 
-						<input type="range" id="sizerange" class="range" value="1" max="2" min="0" step="0.01" ng-model="size" />
-						<input type="text" value="1" disabled />
-					</td>
-				</tr>
-				<tr>
-					<td class="title">
-						旋转
-					</td>
-					<td class="bar">
-						<input type="range" id="rotaterange" class="range" value="0" max="180" min="-180" step="1" ng-model="rotate" />
-						<input type="text" value="0" disabled />
-					</td>
-				</tr>
-			</table>
-			<div class="btngroup">
-				<div class="btn" id="confirmbtn">
-					<span>确定</span>
-				</div>
-				<div class="btn" id="resetbtn" style="margin-top:15px;">
-					<span>重置</span>
-				</div>
-			</div>
-		</div>
-		<div class="removebox">
-			<i class="flaticon-rubbish7"></i>
 		</div>
 	</div>
-<script src="__PUBLIC__/js/public.js"></script>
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
 <script src="__PUBLIC__/js/hidpi-canvas.js"></script>
 <script>
-var canvas = document.getElementById("canvas"),
-	context = canvas.getContext('2d');
-	$("#savebtn").bind("click",function(){
-		context.drawImage($(".limitedbox img")[0],0,0);
-		$(".limitedbox img").hide();
-		$.each($(".emoji"),function(){
+// $.touchyOptions.useDelegation = true;
+	var sW = $(window).width(), sH = $(window).height(), _r = 0.68;
+	var position;// a global variable, which define imagebox's width, height
+	var canvas = document.getElementById("canvas"),
+	context = canvas.getContext('2d'),
+	ratio = getPixelRatio(context);
+	$("body").height(sH).width(sW);
+	$.each($("#emojibox .scrollbox .longbox"),function(){
+		var l = $(this).children('.emojitable').length;
+		$(this).css("width",l*100+"%").children('.emojitable').css("width",100/l+"%");
+	})
+	$("#uploadbox").bind('click',function(){
+		$('#photofile').trigger('click');
+	})
+	$("#photofile").bind("change",function(){
+		var f = this.files[0];
+		if(!/image\/\w+/.test(f.type)){ 
+			alert("亲只能传图片哦"); 
+			return false; 
+		} 
+		var reader = new FileReader();
+		reader.readAsDataURL(f);
+		var img = new Image();
+		img.src = getUrl(f);
+		img.onload = function(){
+			position = sizereset(sW,$(".innerbox").height(),img.width,img.height);
+			this.height = position.h, this.width = position.w;
+			$('.innerbox .imagebox').css({
+				"width":position.w+"px",
+				"height":position.h+"px",
+				"left":position.dx+"px"
+			}).append($(img).addClass('userimage'));
+			$(".canvasbox").css({
+				"width":position.w+"px",
+				"height":position.h+"px",
+				"left":position.dx+"px"
+			});
+			canvas.style.width = position.w+"px";
+			canvas.style.height = position.h+"px";
+			canvas.setAttribute("width",position.w*ratio);
+			canvas.setAttribute("height",position.h*ratio);
+		}
+		$(".imagebox").empty();
+		context.clearRect(0,0,position.w*ratio,position.h*ratio);
+	})
+	var oX, oY, imghtml;
+	var isTouchStart = false, isTouchMove = false;
+	$(".emojitable div img").bind('touchstart',function(e){
+		isTouchStart = true;
+		isTouchMove = false;
+	})
+	$(".emojitable div img").bind('touchmove',function(e){
+		isTouchMove = true;
+	})
+	$(".emojitable div img").bind('touchend',function(e){
+		if(isTouchStart&&!isTouchMove){
+			var src = $(this).attr("src").replace("emoji64","emoji160");
+			imghtml = "<img src='"+src+"' class='emoji' style='left:"+(position.w/2-40)+"px;top:"+(position.h/2-40)+"px;' data-size='1' data-rotate='0' />";
+			$(imghtml).appendTo('.imagebox');
+			oX = $(this).offset().left;
+			oY = $(this).offset().top;
+			$("#emojibox").removeClass('show');
+			$(".ctrlbottom").addClass('ctrlstate');
+		}
+	})
+
+	$.fn.dragInit = function(){
+
+	}
+	var emojioX, emojioY, emojitX, emojitY;
+
+	// 给所有emoji绑定函数
+	$(document).on('touchstart','.emoji',function(e){
+		e.preventDefault();e.stopPropagation();
+		emojioX = $(this).position().left;
+		emojioY = $(this).position().top;
+		emojitX = e.originalEvent.changedTouches[0].pageX;
+		emojitY = e.originalEvent.changedTouches[0].pageY;
+		saveAdjust();//保存之前的调整结果
+		$(this).beginAdjust();//当前emoji开始调整
+	})
+	$(document).on('touchmove','.emoji',function(e){
+		e.preventDefault();e.stopPropagation();
+		var _oX = emojioX + e.originalEvent.changedTouches[0].pageX - emojitX,
+			_oY = emojioY + e.originalEvent.changedTouches[0].pageY - emojitY;
+		$(this).css({"top":_oY,"left":_oX});
+	})
+	$(document).on('touchend',".emoji",function(e){
+		e.preventDefault();e.stopPropagation();
+		if($(this).hasClass('draging')){
+			$(this).removeClass('draging');
+		}
+	})
+	var tX, dx;
+	$(document).on('touchstart',".longbox",function(e){
+		tX = e.originalEvent.changedTouches[0].pageX;
+	})
+	$(document).on('touchmove',".longbox",function(e){
+		dx = e.originalEvent.changedTouches[0].pageX - tX;
+	})
+	$(document).on('touchend',".longbox",function(e){
+			var p = $(this).attr("data-page")-0,
+			maxp = $(this).children(".emojitable").length;
+			if(p>=0 && p<maxp){
+				var l;
+				if(dx > 0 && p>0){
+					l = $(".emojitable[data-index='"+(--p)+"']",this).position().left;
+				}
+				else if(dx<0 && p<maxp-1){
+					l = $(".emojitable[data-index='"+(++p)+"']",this).position().left;
+				}
+				else{}
+				$(this).attr("data-page",p).closest(".scrollbox").stop(true).animate({scrollLeft:l}, 300, function(){
+					$(this).find('.pagenav a').removeClass('now').filter(":nth-child("+(p+1)+")").addClass('now');
+				});
+			}
+	})
+	//选择section
+	$(".section div").bind('touchend',function(){
+		var t = $(this).attr("data-tab");
+		$("#emojibox").attr("data-showid",t);
+	})
+	$.fn.beginAdjust = function(){
+		$(".ctrlbottom").addClass('ctrlstate');
+		var vs = $(this).attr("data-size"),
+		    vr = $(this).attr("data-rotate");
+		$("#sizerange").val(vs);
+		$("#rotaterange").val(vr);
+		$(this).bindCtrl();
+	}
+	$.fn.bindCtrl = function(){
+		var $this = $(this),w = $(this)[0].naturalHeight;
+		$(".emoji").removeClass('adjusting');
+		$this.addClass('adjusting');
+		$('.range').unbind(".control");
+		$("#sizerange").bind('touchmove.control',function(){
+			var v = $(this).val()/2;
+			$this.css({"width":w*v}).attr("data-size",v);
+		});
+		$("#rotaterange").val($this.attr("data-rotate")).bind('touchmove.control',function(){
+			var v = $(this).val();
+			$this.css({"transform":"rotate("+v+"deg)","-webkit-transform":"rotate("+v+"deg)"}).attr("data-rotate",v);
+		})
+	}
+	$.fn.removeEmoji = function(){
+		$(this).remove();
+		$(".ctrlbottom").removeClass('ctrlstate');
+	}
+	function saveAdjust(){
+		$(".emoji.adjusting").attr({"data-size":$("#sizerange").next("input[type='text']").val(),"data-rotate":$("#rotaterange").next("input[type='text']").val()});
+	}
+	function sizereset(maxwidth,maxheight,width,height){
+	  var r = maxwidth/maxheight,
+	      radio = width/height,
+	      dx = dy = 0;
+	  if(radio >= r){
+	    width=maxwidth;
+	    height=maxwidth/radio;
+	    dy=(maxheight-height)/2;
+	  }
+	  else{
+	    height=maxheight;
+	    width=maxheight*radio;
+	    dx = (maxwidth-width)/2;
+	  }
+	  var position = {
+	    w:width,
+	    h:height,
+	    dx:dx,
+	    dy:dy
+	  }
+	  return position;
+	}
+	function getUrl(file){
+		var url;
+		if (window.createObjectURL != undefined) {
+			url = window.createObjectURL(file)
+		} 
+		else if (window.URL != undefined) {
+			url = window.URL.createObjectURL(file)
+		} 
+		else if(window.webkitURL != undefined) {
+			url = window.webkitURL.createObjectURL(file)
+		}
+		return url;
+	}
+		$("#savebtn").bind("click",function(){
+			var img = $(".imagebox img");
+			context.drawImage(img[0],0,0,ratio*position.w,ratio*position.h);
+			context.save();
+			$.each($(".emoji"),function(){
+				var emoji = $(this);
+				var angle = emoji.attr("data-rotate")*Math.PI/180;
+				var left = emoji.position().left,
+					top = emoji.position().top;
+			 	var dx;
+			 	if(angle<Math.PI/2&&angle>0||angle<-Math.PI/2){
+			 		dx = 0.70710678*Math.cos(Math.PI/4-angle)*emoji.width();
+			 	}
+			 	else{
+			 		dx = -0.70710678*Math.cos(angle+Math.PI/4)*emoji.width();
+			 	}
+			 	dx = dx < 0?-dx:dx;
+			 	var xpos = left+dx;
+			    var ypos = top+dx;
+				context.save();
+				context.translate(xpos, ypos);
+				context.rotate(angle);
+				context.translate(-xpos, -ypos);
+				context.drawImage(emoji[0], ratio*(xpos-0.5*emoji.width()), ratio*(ypos-0.5*emoji.height()), ratio*emoji.width(), ratio*emoji.height());
+				// context.drawImage(emoji[0], 0, 0, ratio*emoji.width(), ratio*emoji.height());
+				context.restore();
+				console.log(ratio+","+xpos);
+			});
+			$(".imagebox img").hide();
+			canvas.style.display = "none";
+			var image = getimage(canvas);
+			$(image).addClass("limit").appendTo('.imagebox');
 			
 		})
+		
+	function getPixelRatio(context){
+	    var backingStore = context.backingStorePixelRatio ||
+	          context.webkitBackingStorePixelRatio ||
+	          context.mozBackingStorePixelRatio ||
+	          context.msBackingStorePixelRatio ||
+	          context.oBackingStorePixelRatio ||
+	          context.backingStorePixelRatio || 1;
+	    return (window.devicePixelRatio || 1) / backingStore;
+	}
+	function getimage(canvas){
+		var image = new Image();
+	    image.src = canvas.toDataURL("image/png");
+	    return image;
+	}
+			  
+</script>
+<script>
+	$(".addemojibtn").bind('click',function(){
+		$("#emojibox").toggleClass('show');
+	})
+	$("#removebtn").bind('touchend click',function(){
+		$(".emoji.adjusting").removeEmoji();
+	})
+	$("#resetbtn").bind('click',function(){
+		var w = "80px";
+		$(".emoji.adjusting").css({"width":w,"transform":"rotate(0)","-webkit-transform":"rotate(0)"}).attr({"data-size":1,"data-rotate":0});
+		$("#sizerange").val(1).next('input[type="text"]').val(1);
+		$("#rotaterange").val(0).next('input[type="text"]').val(0);
 	})
 </script>
 </body>

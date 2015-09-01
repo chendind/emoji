@@ -2,7 +2,6 @@ var sW = $(window).width(), sH = $(window).height(), _r = 0.68;
 $("#beyond").height(sH-sW*_r);
 $.each($("#emojibox .scrollbox .longbox"),function(){
 	var l = $(this).children('.emojitable').length;
-	console.log(l);
 	$(this).css("width",l*100+"%").children('.emojitable').css("width",100/l+"%");
 })
 $("#uploadbox").bind('click',function(){
@@ -174,7 +173,7 @@ $.fn.removeEmoji = function(){
 	$("#beyond").removeClass('removestate ctrlstate');
 }
 function saveAdjust(){
-	$(".emoji.adjusting").attr({"data-size":$("#sizerange").val(),"data-rotate":$("#rotaterange").val()});
+	$(".emoji.adjusting").attr({"data-size":$("#sizerange").next("input[type='text']").val(),"data-rotate":$("#rotaterange").next("input[type='text']").val()});
 }
 function sizereset(maxwidth,maxheight,width,height){
 	// alert(maxwidth+","+maxheight+","+width+","+height);
