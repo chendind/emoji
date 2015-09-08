@@ -7,27 +7,69 @@
 	<meta name="description" content="地球人已经无法阻止emoji表情啦">
 	<meta name="author" content="chendind@leovito.com">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/flaticon/flaticon.css"> 
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/reset.css">
+	
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/fontello.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/animation.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/reset.css">
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/public.css">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b82cce5dc4aeb609adb2e0ad1274eeff";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 </head>
-<body>
+<body class="init">
 	<div style="display:none">
 		<img src="__PUBLIC__/img/icon300.png" alt="" />
 	</div>
-	<div class="limitedbox">
+	<div class="limitedbox firstPage">
+		<div class="veryCenter firstnewimage" id="firstnewimage">
+			<i class="demo-icon icon-camera"></i>
+		</div>
+		<div class="title">
+			<img src="__PUBLIC__/img/title.png" alt="">
+		</div>
+		<i class="demo-icon icon-info-circled info"></i>
+		<div class="veryCenter appinfo">
+			<div class="closebtn"><i class="demo-icon icon-cancel"></i></div>
+			<table>
+				<tr>
+					<td><i class="demo-icon icon-user-secret"></i></td>
+					<td>Bluecat</td>
+				</tr>
+				<tr>
+					<td><i class="demo-icon icon-mail-alt"></i></td>
+					<td><a href="mailto:chendind@leovito.com">chendind@leovito.com</a></td>
+				</tr>
+				<tr>
+					<td><i class="demo-icon icon-link"></i></td>
+					<td><a href="http://product.leovito.com" target="_blank">Products Web</a></td>
+				</tr>
+				<tr>
+					<td><i class="demo-icon icon-wechat"></i></td>
+					<td>chendd2533</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="limitedbox workPage">
 		<div class="ctrltop">
-			<div class="icon">
-				<i class="flaticon-add182"></i>
+			<div class="icon" id="copybtn">
+				<i class="demo-icon icon-doc-add"></i>
 			</div>
-			<div class="icon">
-				<i class="flaticon-arrow73"></i>
+			<div class="icon" id="indexbtn">
+				<i class="demo-icon icon-popup"></i>
 			</div>
 			<div class="icon" id="resetbtn">
-				<i class="flaticon-bars62"></i>
+				<i class="demo-icon icon-ccw"></i>
 			</div>
 			<div class="icon" id="removebtn">
-				<i class="flaticon-rubbish7"></i>
+				<i class="demo-icon icon-trash-1"></i>
 			</div>
 		</div>
 		<div class="innerbox">
@@ -37,7 +79,7 @@
 			<div class="imagebox">
 			</div>
 		</div>
-		<div class="ctrlbottom">
+		<div class="ctrlbottom" id="ctrlbottom">
 			<div class="ctrlbox">
 				<div>
 					<span>大小</span>
@@ -50,15 +92,15 @@
 			</div>
 			<div>
 				<div class="newimage" id="uploadbox">
-					<i class="flaticon-add182"></i>新照片
+					<i class="demo-icon icon-camera" style="margin-right:5px;"></i>新照片
 				</div>
 				<input id="photofile" type="file" />
 				<div class="saveimage" id="savebtn">
-					<i class="flaticon-add182"></i>保存图片
+					<i class="demo-icon icon-download" style="margin-right:5px;"></i>保存图片
 				</div>
 				<div class="emojibox" id="emojibox" data-showid="emotion">
 					<div class="addemojibtn horizontalCenter">
-						<img src="__PUBLIC__/img/icon.png">
+						<img src="/Public/img/icon2.png">
 					</div>
 					<div class="scrollbox" id="emotion">
 						<div class="longbox" data-page="0">
@@ -180,259 +222,24 @@
 			</div>
 		</div>
 	</div>
-<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
-<script src="__PUBLIC__/js/hidpi-canvas.js"></script>
-<script>
-// $.touchyOptions.useDelegation = true;
-	var sW = $(window).width(), sH = $(window).height(), _r = 0.68;
-	var position;// a global variable, which define imagebox's width, height
-	var canvas = document.getElementById("canvas"),
-	context = canvas.getContext('2d'),
-	ratio = getPixelRatio(context);
-	$("body").height(sH).width(sW);
-	$.each($("#emojibox .scrollbox .longbox"),function(){
-		var l = $(this).children('.emojitable').length;
-		$(this).css("width",l*100+"%").children('.emojitable').css("width",100/l+"%");
-	})
-	$("#uploadbox").bind('click',function(){
-		$('#photofile').trigger('click');
-	})
-	$("#photofile").bind("change",function(){
-		var f = this.files[0];
-		if(!/image\/\w+/.test(f.type)){ 
-			alert("亲只能传图片哦"); 
-			return false; 
-		} 
-		var reader = new FileReader();
-		reader.readAsDataURL(f);
-		var img = new Image();
-		img.src = getUrl(f);
-		img.onload = function(){
-			position = sizereset(sW,$(".innerbox").height(),img.width,img.height);
-			this.height = position.h, this.width = position.w;
-			$('.innerbox .imagebox').css({
-				"width":position.w+"px",
-				"height":position.h+"px",
-				"left":position.dx+"px"
-			}).append($(img).addClass('userimage'));
-			$(".canvasbox").css({
-				"width":position.w+"px",
-				"height":position.h+"px",
-				"left":position.dx+"px"
-			});
-			canvas.style.width = position.w+"px";
-			canvas.style.height = position.h+"px";
-			canvas.setAttribute("width",position.w*ratio);
-			canvas.setAttribute("height",position.h*ratio);
-		}
-		$(".imagebox").empty();
-		context.clearRect(0,0,position.w*ratio,position.h*ratio);
-	})
-	var oX, oY, imghtml;
-	var isTouchStart = false, isTouchMove = false;
-	$(".emojitable div img").bind('touchstart',function(e){
-		isTouchStart = true;
-		isTouchMove = false;
-	})
-	$(".emojitable div img").bind('touchmove',function(e){
-		isTouchMove = true;
-	})
-	$(".emojitable div img").bind('touchend',function(e){
-		if(isTouchStart&&!isTouchMove){
-			var src = $(this).attr("src").replace("emoji64","emoji160");
-			imghtml = "<img src='"+src+"' class='emoji' style='left:"+(position.w/2-40)+"px;top:"+(position.h/2-40)+"px;' data-size='1' data-rotate='0' />";
-			$(imghtml).appendTo('.imagebox');
-			oX = $(this).offset().left;
-			oY = $(this).offset().top;
-			$("#emojibox").removeClass('show');
-			$(".ctrlbottom").addClass('ctrlstate');
-		}
-	})
-
-	$.fn.dragInit = function(){
-
-	}
-	var emojioX, emojioY, emojitX, emojitY;
-
-	// 给所有emoji绑定函数
-	$(document).on('touchstart','.emoji',function(e){
-		e.preventDefault();e.stopPropagation();
-		emojioX = $(this).position().left;
-		emojioY = $(this).position().top;
-		emojitX = e.originalEvent.changedTouches[0].pageX;
-		emojitY = e.originalEvent.changedTouches[0].pageY;
-		saveAdjust();//保存之前的调整结果
-		$(this).beginAdjust();//当前emoji开始调整
-	})
-	$(document).on('touchmove','.emoji',function(e){
-		e.preventDefault();e.stopPropagation();
-		var _oX = emojioX + e.originalEvent.changedTouches[0].pageX - emojitX,
-			_oY = emojioY + e.originalEvent.changedTouches[0].pageY - emojitY;
-		$(this).css({"top":_oY,"left":_oX});
-	})
-	$(document).on('touchend',".emoji",function(e){
-		e.preventDefault();e.stopPropagation();
-		if($(this).hasClass('draging')){
-			$(this).removeClass('draging');
-		}
-	})
-	var tX, dx;
-	$(document).on('touchstart',".longbox",function(e){
-		tX = e.originalEvent.changedTouches[0].pageX;
-	})
-	$(document).on('touchmove',".longbox",function(e){
-		dx = e.originalEvent.changedTouches[0].pageX - tX;
-	})
-	$(document).on('touchend',".longbox",function(e){
-			var p = $(this).attr("data-page")-0,
-			maxp = $(this).children(".emojitable").length;
-			if(p>=0 && p<maxp){
-				var l;
-				if(dx > 0 && p>0){
-					l = $(".emojitable[data-index='"+(--p)+"']",this).position().left;
-				}
-				else if(dx<0 && p<maxp-1){
-					l = $(".emojitable[data-index='"+(++p)+"']",this).position().left;
-				}
-				else{}
-				$(this).attr("data-page",p).closest(".scrollbox").stop(true).animate({scrollLeft:l}, 300, function(){
-					$(this).find('.pagenav a').removeClass('now').filter(":nth-child("+(p+1)+")").addClass('now');
-				});
-			}
-	})
-	//选择section
-	$(".section div").bind('touchend',function(){
-		var t = $(this).attr("data-tab");
-		$("#emojibox").attr("data-showid",t);
-	})
-	$.fn.beginAdjust = function(){
-		$(".ctrlbottom").addClass('ctrlstate');
-		var vs = $(this).attr("data-size"),
-		    vr = $(this).attr("data-rotate");
-		$("#sizerange").val(vs);
-		$("#rotaterange").val(vr);
-		$(this).bindCtrl();
-	}
-	$.fn.bindCtrl = function(){
-		var $this = $(this),w = $(this)[0].naturalHeight;
-		$(".emoji").removeClass('adjusting');
-		$this.addClass('adjusting');
-		$('.range').unbind(".control");
-		$("#sizerange").bind('touchmove.control',function(){
-			var v = $(this).val()/2;
-			$this.css({"width":w*v}).attr("data-size",v);
-		});
-		$("#rotaterange").val($this.attr("data-rotate")).bind('touchmove.control',function(){
-			var v = $(this).val();
-			$this.css({"transform":"rotate("+v+"deg)","-webkit-transform":"rotate("+v+"deg)"}).attr("data-rotate",v);
-		})
-	}
-	$.fn.removeEmoji = function(){
-		$(this).remove();
-		$(".ctrlbottom").removeClass('ctrlstate');
-	}
-	function saveAdjust(){
-		$(".emoji.adjusting").attr({"data-size":$("#sizerange").next("input[type='text']").val(),"data-rotate":$("#rotaterange").next("input[type='text']").val()});
-	}
-	function sizereset(maxwidth,maxheight,width,height){
-	  var r = maxwidth/maxheight,
-	      radio = width/height,
-	      dx = dy = 0;
-	  if(radio >= r){
-	    width=maxwidth;
-	    height=maxwidth/radio;
-	    dy=(maxheight-height)/2;
-	  }
-	  else{
-	    height=maxheight;
-	    width=maxheight*radio;
-	    dx = (maxwidth-width)/2;
-	  }
-	  var position = {
-	    w:width,
-	    h:height,
-	    dx:dx,
-	    dy:dy
-	  }
-	  return position;
-	}
-	function getUrl(file){
-		var url;
-		if (window.createObjectURL != undefined) {
-			url = window.createObjectURL(file)
-		} 
-		else if (window.URL != undefined) {
-			url = window.URL.createObjectURL(file)
-		} 
-		else if(window.webkitURL != undefined) {
-			url = window.webkitURL.createObjectURL(file)
-		}
-		return url;
-	}
-		$("#savebtn").bind("click",function(){
-			var img = $(".imagebox img");
-			context.drawImage(img[0],0,0,ratio*position.w,ratio*position.h);
-			context.save();
-			$.each($(".emoji"),function(){
-				var emoji = $(this);
-				var angle = emoji.attr("data-rotate")*Math.PI/180;
-				var left = emoji.position().left,
-					top = emoji.position().top;
-			 	var dx;
-			 	if(angle<Math.PI/2&&angle>0||angle<-Math.PI/2){
-			 		dx = 0.70710678*Math.cos(Math.PI/4-angle)*emoji.width();
-			 	}
-			 	else{
-			 		dx = -0.70710678*Math.cos(angle+Math.PI/4)*emoji.width();
-			 	}
-			 	dx = dx < 0?-dx:dx;
-			 	var xpos = left+dx;
-			    var ypos = top+dx;
-				context.save();
-				context.translate(xpos, ypos);
-				context.rotate(angle);
-				context.translate(-xpos, -ypos);
-				context.drawImage(emoji[0], ratio*(xpos-0.5*emoji.width()), ratio*(ypos-0.5*emoji.height()), ratio*emoji.width(), ratio*emoji.height());
-				// context.drawImage(emoji[0], 0, 0, ratio*emoji.width(), ratio*emoji.height());
-				context.restore();
-				console.log(ratio+","+xpos);
-			});
-			$(".imagebox img").hide();
-			canvas.style.display = "none";
-			var image = getimage(canvas);
-			$(image).addClass("limit").appendTo('.imagebox');
-			
-		})
-		
-	function getPixelRatio(context){
-	    var backingStore = context.backingStorePixelRatio ||
-	          context.webkitBackingStorePixelRatio ||
-	          context.mozBackingStorePixelRatio ||
-	          context.msBackingStorePixelRatio ||
-	          context.oBackingStorePixelRatio ||
-	          context.backingStorePixelRatio || 1;
-	    return (window.devicePixelRatio || 1) / backingStore;
-	}
-	function getimage(canvas){
-		var image = new Image();
-	    image.src = canvas.toDataURL("image/png");
-	    return image;
-	}
-			  
-</script>
-<script>
-	$(".addemojibtn").bind('click',function(){
-		$("#emojibox").toggleClass('show');
-	})
-	$("#removebtn").bind('touchend click',function(){
-		$(".emoji.adjusting").removeEmoji();
-	})
-	$("#resetbtn").bind('click',function(){
-		var w = "80px";
-		$(".emoji.adjusting").css({"width":w,"transform":"rotate(0)","-webkit-transform":"rotate(0)"}).attr({"data-size":1,"data-rotate":0});
-		$("#sizerange").val(1).next('input[type="text"]').val(1);
-		$("#rotaterange").val(0).next('input[type="text"]').val(0);
-	})
-</script>
+	<div class="limitedbox savebox">
+		<p class="ctrltop">长按图片保存</p>
+		<div class="innerbox composeimagebox" id="composeimagebox"></div>
+		<div class="ctrlbottom">
+			<div id="returnbtn">
+				返回
+			</div>
+		</div>
+	</div>
+	<div class="limitedbox loadingbox">
+		<div class="veryCenter">
+			<p class='i'><i class="demo-icon icon-spin5 animate-spin"></i></p>
+			<p class="w">拼命处理中…</p>
+		</div>
+	</div>
+<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+<script src="__PUBLIC__/js/exif.min.js"></script>
+<script src="__PUBLIC__/js/ImageOrientationFix.min.js"></script>
+<script src="__PUBLIC__/js/public.min.js"></script>
 </body>
 </html>
